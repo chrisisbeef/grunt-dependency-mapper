@@ -181,3 +181,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ### v0.1.0 - 08 April 2016
 
 * Initial Release
+
+## Build Status
+
+[![Build Status](https://travis-ci.org/chrisisbeef/grunt-dependency-mapper.svg?branch=master)](https://travis-ci.org/chrisisbeef/grunt-dependency-mapper)
