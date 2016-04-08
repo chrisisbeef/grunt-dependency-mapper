@@ -184,4 +184,4 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Build Status
 
-[![Build Status](https://travis-ci.org/chrisisbeef/grunt-dependency-mapper.svg?branch=master)](https://travis-ci.org/chrisisbeef/grunt-dependency-mapper)
+[![Build Status](https://travis-ci.org/chrisisbeef/grunt-dependency-mapper.svg?branch=develop)](https://travis-ci.org/chrisisbeef/grunt-dependency-mapper)
