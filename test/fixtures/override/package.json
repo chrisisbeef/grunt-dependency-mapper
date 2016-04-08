@@ -1,0 +1,12 @@
+{
+  "name": "test",
+  "version": "0.1.0",
+  "dependencies": {
+    "custom.dependency": "0.0.1"
+  },
+  "dependency_map": {
+    "custom.dependency": {
+      "global": "git+ssh://github.com/custom.dependency#master"
+    }
+  }
+}
