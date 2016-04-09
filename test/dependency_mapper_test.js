@@ -54,6 +54,15 @@ exports.dependency_mapper = {
 
     test.done();
   },
+  target_contains_repo: function(test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/target_contains_repo/package.json');
+    var expected = grunt.file.read('test/expected/target_contains_repo/package.json');
+    test.equal(actual, expected, 'should replace the repo with the specified one');
+
+    test.done();
+  },
   missing: function(test) {
     test.expect(1);
 
