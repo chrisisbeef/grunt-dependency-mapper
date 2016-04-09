@@ -178,6 +178,12 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+### v0.1.1 - 08 April 2016
+
+* Added build information for travis-ci
+* Added build indicator to README
+* Fix issue #1 - Plugin assumes any value in the dependency field is a branch/tag to append
+
 ### v0.1.0 - 08 April 2016
 
 * Initial Release
