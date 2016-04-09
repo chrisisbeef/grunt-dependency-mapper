@@ -56,11 +56,26 @@ module.exports = function (grunt) {
                             var target_value = environments[options.env];
                             var current_value = package_json[dependency_collection][dependency_name];
 
-                            if (current_value.length > 0 && target_value.indexOf('#') > 0) {
-                                grunt.log.warn("Branch/Tag Specified in Target Repository (" + target_value.substr(target_value.indexOf('#')+1) + ") will be overridden by (" + current_value + ")")
-                                package_json[dependency_collection][dependency_name] = target_value.substr(0,target_value.indexOf('#')+1) + current_value;
+                            var current_value_contains_branch = true;
+                            for (var e in environments) {
+                                if (environments.hasOwnProperty(e)) {
+                                    grunt.log.writeln("Checking if " + current_value + " contains " + environments[e]);
+                                    if (current_value.indexOf(environments[e]) > -1) {
+
+                                        current_value_contains_branch = false;
+                                    }
+                                }
+                            }
+
+                            if (current_value_contains_branch) {
+                                if (current_value.length > 0 && target_value.indexOf('#') > 0) {
+                                    grunt.log.warn("Branch/Tag Specified in Target Repository (" + target_value.substr(target_value.indexOf('#') + 1) + ") will be overridden by (" + current_value + ")")
+                                    package_json[dependency_collection][dependency_name] = target_value.substr(0, target_value.indexOf('#') + 1) + current_value;
+                                } else {
+                                    package_json[dependency_collection][dependency_name] = target_value + (current_value.length > 0 ? "#" + current_value : "");
+                                }
                             } else {
-                                package_json[dependency_collection][dependency_name] = target_value + (current_value.length > 0 ? "#" + current_value : "");
+                                package_json[dependency_collection][dependency_name] = target_value;
                             }
 
                             grunt.log.writeln("Set '" + dependency_name + "' to pull from '" + package_json[dependency_collection][dependency_name]);
