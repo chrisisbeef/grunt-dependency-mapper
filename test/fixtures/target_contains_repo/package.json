@@ -1,0 +1,14 @@
+{
+  "name": "test",
+  "version": "0.1.0",
+  "dependencies": {
+    "custom.dependency": "git+ssh://github.com/custom.dependency#develop"
+  },
+  "dependency_map": {
+    "custom.dependency": {
+      "development": "git+ssh://github.com/custom.dependency#develop",
+      "ci": "git+ssh://github.com/custom.dependency#ci",
+      "production": "git+ssh://github.com/custom.dependency#master"
+    }
+  }
+}

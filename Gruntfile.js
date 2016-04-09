@@ -57,6 +57,15 @@ module.exports = function(grunt) {
           outputDir: 'tmp/override'
         }
       },
+      target_contains_repo: {
+        options: {
+          env: 'production',
+          files: [
+              'test/fixtures/target_contains_repo/package.json'
+          ],
+          outputDir: 'tmp/target_contains_repo'
+        }
+      },
       missing: {
         options: {
           env: 'none',
