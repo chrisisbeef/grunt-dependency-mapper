@@ -1,7 +1,7 @@
 {
   "name": "grunt-dependency-mapper",
   "description": "Parse package.json for Custom Dependency Routing based on environment",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/chrisisbeef/grunt-dependency-mapper.git",
   "author": {
     "name": "chrisisbeef",
